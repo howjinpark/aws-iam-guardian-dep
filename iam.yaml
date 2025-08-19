@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: iam-manager
-          image: ghcr.io/howjinpark/iam-manager-service:13
+          image: ghcr.io/howjinpark/iam-manager-service:14
           ports:
             - containerPort: 8001
           envFrom:
