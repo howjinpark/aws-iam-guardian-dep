@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iam-manager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iam-manager
+  template:
+    metadata:
+      labels:
+        app: iam-manager
+    spec:
+      containers:
+        - name: iam-manager
+          image: ghcr.io/howjinpark/iam-manager-service:latest
+          ports:
+            - containerPort: 8001
+          envFrom:
+            - configMapRef:
+                name: iam-manager-config
+            - secretRef:
+                name: iam-manager-secrets
