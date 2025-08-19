@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: ghcr.io/howjinpark/auth-service:8
+          image: ghcr.io/howjinpark/auth-service:11
           ports:
             - containerPort: 8000
           envFrom:

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/howjinpark/frontend-service:10
+        image: ghcr.io/howjinpark/frontend-service:11
         ports:
         - containerPort: 80
         env:
