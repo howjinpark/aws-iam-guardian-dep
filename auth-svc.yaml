@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: auth
+  ports:
+  - port: 80        # ← 이걸 80으로 변경!
+    targetPort: 8000  # 컨테이너 포트는 그대로
+    protocol: TCP
